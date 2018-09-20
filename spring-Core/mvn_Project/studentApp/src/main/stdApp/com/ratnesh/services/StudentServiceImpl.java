@@ -1,0 +1,46 @@
+package com.ratnesh.services;
+
+import com.ratnesh.daos.StudentDao;
+import com.ratnesh.dtos.StudentTo;
+import com.ratnesh.factories.StudentDaoFactory;
+
+public class StudentServiceImpl implements StudentService {
+
+	String status = "";
+	@Override
+	public String add(StudentTo sto) {
+		
+		StudentDao stdDao = StudentDaoFactory.getStudentDao();
+		status = stdDao.insert(sto);
+		return status;
+	}
+	@Override
+	public StudentTo search(String sid) {
+		StudentTo sto = null;
+		StudentDao stdDao = StudentDaoFactory.getStudentDao();
+		sto= stdDao.search(sid);
+		return sto;
+	}
+
+	@Override
+	public StudentTo getStudent(String sid) {
+		StudentTo sto = null;
+		StudentDao stdDao = StudentDaoFactory.getStudentDao();
+		return stdDao.getStudent(sid);
+	}
+
+	@Override
+	public String update(StudentTo std) {
+		StudentDao stdDao = StudentDaoFactory.getStudentDao();
+		status = stdDao.update(std);
+		return status;
+	}
+
+	@Override
+	public String delete(String sid) {
+		StudentDao stdDao = StudentDaoFactory.getStudentDao();
+		status = stdDao.delete(sid);
+		return status;
+	}
+
+}

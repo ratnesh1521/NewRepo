@@ -1,0 +1,37 @@
+package com.ratnesh.daos;
+
+import com.ratnesh.dtos.StudentTo;
+
+public class StudentDaoImpl implements StudentDao {
+
+	@Override
+	public String insert(StudentTo sid) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public StudentTo search(String sid) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public StudentTo getStudent(String sid) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String update(StudentTo sid) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String delete(String sid) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

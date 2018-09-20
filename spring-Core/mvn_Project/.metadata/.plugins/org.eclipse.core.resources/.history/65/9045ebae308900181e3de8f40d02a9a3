@@ -1,0 +1,39 @@
+package com.ratnesh.services;
+
+import com.ratnesh.daos.StudentDao;
+import com.ratnesh.dtos.StudentTo;
+import com.ratnesh.factories.StudentDaoFactory;
+
+public class StudentServiceImpl implements StudentService {
+
+	@Override
+	public String add(StudentTo sto) {
+		StudentDao stdDao = StudentDaoFactory.getStudentDao();
+		return stdDao.insert(sid);
+	}
+
+	@Override
+	public StudentTo search(String sid) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public StudentTo getStudent(String sid) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String update(String sid) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String delete(String sid) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

@@ -1,0 +1,10 @@
+package com.ratnesh.beans;
+
+public class AccountBean {
+	private String driverClass;
+	private String driverURL;
+	private String db_UserName;
+	private String db_Password;
+	
+	
+}

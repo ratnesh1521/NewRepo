@@ -1,0 +1,57 @@
+package com.ratnesh.controller;
+
+import java.io.IOException;
+
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.ratnesh.dtos.StudentTo;
+import com.ratnesh.factories.StudentServiceFactory;
+import com.ratnesh.services.StudentService;
+
+/**
+ * Servlet implementation class Controller
+ */
+public class Controller extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		String status = "";
+		String action = request.getParameter("action");
+		RequestDispatcher reqDispatcher = null;
+		
+			String sid = request.getParameter("sid");
+			String sname = request.getParameter("sname");
+			String saddr = request.getParameter("saddr");
+		
+			if(action.equalsIgnoreCase("ADD")){
+			StudentService stdService = StudentServiceFactory.getStudentService();
+			
+			StudentTo sto = new StudentTo();
+			sto.setSid(sid);
+			sto.setSname(sname);
+			sto.setSaddr(saddr);
+			status = stdService.add(sto);
+			
+			if(status.equals("success")){
+				reqDispatcher = request.getRequestDispatcher("success.html");
+				reqDispatcher.forward(request, response);
+			}
+			if(status.equals("failure")){
+				reqDispatcher = request.getRequestDispatcher("failure.hetml");
+				reqDispatcher.forward(request, response);
+			}
+			if(status.equals("existed")){
+				reqDispatcher = request.getRequestDispatcher("existed.html");
+				reqDispatcher.forward(request, response);
+			}
+		}
+		
+		
+		doGet(request, response);
+	}
+
+}

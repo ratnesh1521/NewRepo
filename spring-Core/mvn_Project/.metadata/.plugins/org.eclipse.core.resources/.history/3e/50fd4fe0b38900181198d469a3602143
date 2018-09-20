@@ -1,0 +1,14 @@
+package com.ratnesh.factories;
+
+import com.ratnesh.services.StudentService;
+import com.ratnesh.services.StudentServiceImpl;
+
+public class StudentServiceFactory {
+	static StudentService stdService;
+	static{
+		stdService = new StudentServiceImpl();
+	}
+	public static StudentService getStudentService(){
+		return stdService;
+	}
+}

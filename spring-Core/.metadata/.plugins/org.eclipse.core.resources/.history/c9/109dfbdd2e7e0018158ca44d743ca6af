@@ -1,0 +1,28 @@
+package com.ratnesh.beans;
+
+public class StudentCourse {
+	private int cid;
+	private String cname;
+	private float cost;
+	
+	
+	public int getCid() {
+		return cid;
+	}
+	public void setCid(int cid) {
+		this.cid = cid;
+	}
+	public String getCname() {
+		return cname;
+	}
+	public void setCname(String cname) {
+		this.cname = cname;
+	}
+	public float getCost() {
+		return cost;
+	}
+	public void setCost(int cost) {
+		this.cost = cost;
+	}
+	
+}

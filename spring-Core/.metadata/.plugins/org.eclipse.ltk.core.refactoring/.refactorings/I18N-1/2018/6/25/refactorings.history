@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;I18N-1/src/abc.properties&apos; to &apos;abc_hi_IN.properties&apos;" description="Rename resource &apos;abc.properties&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/abc.properties" name="abc_hi_IN.properties" stamp="1529755833813" updateReferences="true"/>
+</session>

@@ -1,0 +1,7 @@
+package com.ratnesh.property_editors;
+
+import java.beans.PropertyEditorSupport;
+
+class StudentPropEditor extends PropertyEditorSupport {
+
+}

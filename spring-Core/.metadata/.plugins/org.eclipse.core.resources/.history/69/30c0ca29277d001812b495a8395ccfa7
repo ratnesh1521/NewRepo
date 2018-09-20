@@ -1,0 +1,46 @@
+package com.ratnesh.test;
+
+import org.springframework.expression.Expression;
+import org.springframework.expression.ExpressionParser;
+import org.springframework.expression.spel.standard.SpelExpressionParser;
+
+public class Test {
+
+	public static void main(String[] args)throws Exception {
+		ExpressionParser parser = new SpelExpressionParser();
+		Expression expr = parser.parseExpression("20+20");
+		System.out.println(expr.getValue());
+		
+		expr = parser.parseExpression("true and true");
+		System.out.println(expr.getValue());
+		
+		expr = parser.parseExpression("true && true");
+		System.out.println(expr.getValue());
+		
+		expr = parser.parseExpression("true && false");
+		System.out.println(expr.getValue());
+		
+		expr = parser.parseExpression("true or true");
+		System.out.println(expr.getValue());
+		
+		expr = parser.parseExpression("true || false");
+		System.out.println(expr.getValue());
+		
+		expr = parser.parseExpression("20 ne 10");
+		System.out.println(expr.getValue());
+		
+		expr = parser.parseExpression("10 eq 15");
+		System.out.println(expr.getValue());
+		
+		expr = parser.parseExpression("10 >= 20");
+		System.out.println(expr.getValue());
+		
+		expr = parser.parseExpression("10 lt 15");
+		System.out.println(expr.getValue());
+		
+		expr = parser.parseExpression("15 lt 10");
+		System.out.println(expr.getValue());
+
+	}
+
+}

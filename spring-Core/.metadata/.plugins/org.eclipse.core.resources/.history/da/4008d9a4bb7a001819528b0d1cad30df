@@ -1,0 +1,13 @@
+package com.ratnesh.test;
+
+import org.springframework.beans.BeanWrapper;
+import org.springframework.beans.BeanWrapperImpl;
+
+public class Test {
+
+	public static void main(String[] args) {
+		BeanWrapper bw = new BeanWrapperImpl(Employee.class);
+
+	}
+
+}

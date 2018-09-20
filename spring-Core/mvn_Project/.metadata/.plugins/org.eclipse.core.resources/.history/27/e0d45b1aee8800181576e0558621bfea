@@ -1,0 +1,7 @@
+package com.ratnesh.daos;
+
+public interface studentService {
+
+	public String insert(String sid);
+	public 
+}

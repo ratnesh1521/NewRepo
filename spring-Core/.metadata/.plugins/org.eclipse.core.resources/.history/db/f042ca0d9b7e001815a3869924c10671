@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd">
+        
+	<bean id="stdBean" class="com.ratnesh.beans.Student">
+		<property name="sid" value="111"/>
+		<property name="sname" value="AAA"/>
+		<property name="saddr" value="hyd"/>
+		<property name="scourse" value="c-1,JAVA,5000"/>
+	</bean>
+	<bean id="customEditor" class="org.springframework.beans.factory.config.CustomEditorConfigurer">
+		<property name="customEditors">
+			<map>
+				<entry key="com.ratnesh.beans.StudentCourse" value="com.ratnesh.property_editors.StudentPropEditor"/>
+			</map>
+		</property>
+	</bean>
+</beans>

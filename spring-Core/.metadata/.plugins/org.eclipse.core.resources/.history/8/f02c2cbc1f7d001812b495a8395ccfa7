@@ -1,0 +1,33 @@
+package com.ratnesh.test;
+
+import org.springframework.expression.Expression;
+import org.springframework.expression.ExpressionParser;
+import org.springframework.expression.spel.standard.SpelExpressionParser;
+
+public class Test {
+
+	public static void main(String[] args) {
+		ExpressionParser parser = new SpelExpressionParser();
+		Expression expr = parser.parseExpression("20+20");
+		System.out.println(expr.getValue());
+		
+		Expression expr1 = parser.parseExpression("'abcd'+'efgh'");
+		System.out.println(expr1.getValue());
+		
+		Expression expr2 = parser.parseExpression("0xABCDEF*10+2");
+		System.out.println(expr2.getValue());
+		
+		Expression expr3 = parser.parseExpression("'Ratnesh' matches 'Ra.*'");
+		System.out.println(expr3.getValue());
+		
+		Expression expr4 = parser.parseExpression("'ratnesh@dss.com' matches '[a-z]*@dss.com'");
+		System.out.println(expr4.getValue());
+		
+		Expression expr5 = parser.parseExpression("'ratnesh123@gmail.com' matches '[a-z 0-9]*@gmail.com'");
+		System.out.println(expr5.getValue());
+		}sout
+		
+
+	}
+
+}

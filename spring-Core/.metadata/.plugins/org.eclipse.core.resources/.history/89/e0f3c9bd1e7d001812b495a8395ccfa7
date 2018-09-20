@@ -1,0 +1,19 @@
+package com.ratnesh.test;
+
+import org.springframework.expression.Expression;
+import org.springframework.expression.ExpressionParser;
+import org.springframework.expression.spel.standard.SpelExpressionParser;
+
+public class Test {
+
+	public static void main(String[] args) {
+		ExpressionParser parser = new SpelExpressionParser();
+		Expression expr = parser.parseExpression("20+20");
+		System.out.println(expr.getValue());
+		
+		Expression expr1 = parser.parseExpression("'abcd'+'efgh'");
+		System.out.println(expr1.getValue());
+
+	}
+
+}

@@ -1,0 +1,8 @@
+package com.ratnesh.dtos;
+
+public class StudentTo {
+
+	public String sid;
+	public String sanme;
+	public String saddr;
+}

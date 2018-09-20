@@ -1,0 +1,11 @@
+package com.ratnesh.property_editors;
+
+import java.beans.PropertyEditorSupport;
+
+class StudentPropEditor extends PropertyEditorSupport {
+
+	@Override
+	public void setAsText(String text) throws IllegalArgumentException {
+	 String[] str = text.
+	}
+}

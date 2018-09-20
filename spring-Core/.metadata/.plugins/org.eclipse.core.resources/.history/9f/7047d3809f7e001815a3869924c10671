@@ -1,0 +1,10 @@
+package com.ratnesh.beans;
+
+import java.util.ArrayList;
+
+public class TownState_Collection {
+
+		ArrayList<town_state> town_state = null;
+		
+		
+}

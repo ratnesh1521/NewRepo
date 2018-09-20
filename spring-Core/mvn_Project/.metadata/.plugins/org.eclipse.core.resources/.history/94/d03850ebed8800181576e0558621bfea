@@ -1,0 +1,5 @@
+package com.ratnesh.dtos;
+
+public class StudentTo {
+
+}

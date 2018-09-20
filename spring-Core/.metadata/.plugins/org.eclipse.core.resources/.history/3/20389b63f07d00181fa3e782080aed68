@@ -1,0 +1,7 @@
+package com.ratnesh.beans;
+
+public class StudentCourse {
+	private String cid;
+	private String cname;
+	private String cost;
+}

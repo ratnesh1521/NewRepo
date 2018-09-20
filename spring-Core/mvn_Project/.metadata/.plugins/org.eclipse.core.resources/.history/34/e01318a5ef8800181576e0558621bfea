@@ -1,0 +1,5 @@
+package com.ratnesh.services;
+
+public interface StudentService {
+
+}

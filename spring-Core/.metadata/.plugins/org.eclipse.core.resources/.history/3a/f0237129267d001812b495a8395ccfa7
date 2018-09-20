@@ -1,0 +1,22 @@
+package com.ratnesh.test;
+
+import org.springframework.expression.Expression;
+import org.springframework.expression.ExpressionParser;
+import org.springframework.expression.spel.standard.SpelExpressionParser;
+
+public class Test {
+
+	public static void main(String[] args)throws Exception {
+		ExpressionParser parser = new SpelExpressionParser();
+		Expression expr = parser.parseExpression("20+20");
+		System.out.println(expr.getValue());
+		
+		expr = parser.parseExpression("true and true");
+		System.out.println(expr.getValue());
+		
+		expr = parser.parseExpression("true && true");
+		System.out.println(expr.getValue());
+
+	}
+
+}

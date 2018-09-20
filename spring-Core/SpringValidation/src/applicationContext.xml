@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+        
+        <bean id="user" class="com.ratnesh.beans.User">
+           <property name="uname" value="ratnesh"/>
+           <property name="upwd" value="neha"/>
+           <property name="age" value="35"/>
+           <property name="uemail" value="ratnesh@yahoo.in"/>
+           <property name="umob" value="9087867876"/>
+        </bean>
+        
+        <bean id="validate" class="com.ratnesh.validator.Validation">
+        <property name="resource" value="Messages.properties"/>
+        </bean>
+</beans>

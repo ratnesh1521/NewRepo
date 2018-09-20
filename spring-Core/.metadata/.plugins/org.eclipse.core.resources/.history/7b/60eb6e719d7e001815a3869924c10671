@@ -1,0 +1,5 @@
+package com.ratnesh.beans;
+
+public class Town_State {
+
+}

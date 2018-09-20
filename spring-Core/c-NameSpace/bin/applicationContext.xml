@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans 
+	xmlns:c="http://www.springframework.org/schema/c"
+	xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<bean id="account" class="com.ratnesh.beans.Account" c:accNo="accNo"  c:accName="savings" c:accBal="1000"/>
+	<bean id="empBean" class="com.ratnesh.beans.Employee" c:eid="E-111"  c:ename="AAA" c:esal="15000" c:acc-ref="account"/>	
+
+</beans>

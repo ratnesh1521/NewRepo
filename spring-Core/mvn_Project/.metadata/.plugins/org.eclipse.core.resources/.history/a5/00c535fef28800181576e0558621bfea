@@ -1,0 +1,28 @@
+package com.ratnesh.dtos;
+
+public class StudentTo {
+
+	public String sid;
+	public String sname;
+	public String saddr;
+	public String getSid() {
+		return sid;
+	}
+	public void setSid(String sid) {
+		this.sid = sid;
+	}
+	public String getSanme() {
+		return sanme;
+	}
+	public void setSanme(String sanme) {
+		this.sanme = sanme;
+	}
+	public String getSaddr() {
+		return saddr;
+	}
+	public void setSaddr(String saddr) {
+		this.saddr = saddr;
+	}
+	
+	
+}
